@@ -1,0 +1,48 @@
+<h2>Teacher Management System</h2>
+<div class="row">
+    <div class="col-sm-4"></div>
+    <div [hidden]="submitted" style="width: 1000px; ">
+        <!-- <button class="btn btn-primary" (click)="addTeacher()">Add</button> -->
+        <button class="btn btn-primary" (click)="viewTeacher()">View</button>
+        <!-- <button class="btn btn-primary" (click)="deleteTeacher()">Delete</button> -->
+        <form (ngSubmit)="onSubmit()">
+            <div class="row form-group">
+                <label for="name">Name:</label>
+            </div>
+            <div class="row form-group">
+                <div class="col form-group">
+                    <label for="name">Teacher Name</label>
+                    <input type="text" class="form-control" id="first_name" required [(ngModel)]="teacher.teacher_name"
+                        name="first_name">
+                </div>
+                <div class="col form-group">
+                    <label for="name">Teacher Specification</label>
+                    <input type="text" class="form-control" id="last_name" required
+                        [(ngModel)]="teacher.teacher_specification" name="last_name">
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <label for="name">Contact Details:</label>
+            </div>
+            <div class="row form-group">
+                <div class="col form-group">
+                    <label for="name">Teacher Contact</label>
+                    <input type="text" class="form-control" id="contact" required [(ngModel)]="teacher.teacher_contacts"
+                        name="contact">
+                </div>
+                <div class="col form-group">
+                    <label for="name">Teacher Address</label>
+                    <input type="text" class="form-control" id="Address" required [(ngModel)]="teacher.teacher_address"
+                        name="landline">
+                </div>
+            </div>
+            <div> <button type="submit" class="btn btn-success">Submit</button></div>
+
+        </form>
+    </div>
+
+    <div [hidden]="!submitted">
+        <h4>You submitted successfully!</h4>
+        <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+    </div>

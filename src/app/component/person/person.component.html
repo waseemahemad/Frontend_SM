@@ -1,0 +1,53 @@
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+<p>person works!</p>
+<li><a  routerLink="/login" >Login</a></li>
+<li><a  routerLink="/register" >Register</a></li>
+
+<input type="button"  value="Find User" (click)="getUsersRR()" />
+<!--.....    <a href="#" ng-click="$event.preventDefault();doLogout()">Logout/Back</a>
+ ......<input type="button"  value="Logout" (click)="doLogout()" /> -->
+<!-- <p></p>
+<table>
+    <tr>
+        <th> Id</th>
+        <th> Name</th>
+        <th> Email</th>
+        <th> Mobile</th>
+    </tr>
+    <tr *ngFor="let userR of userLst">
+        <td> {{userR.id}}</td>
+        <td> {{userR.name}}</td>
+        <td> {{userR.email}}</td>
+        <td> {{userR.mobile}}</td>
+    </tr>
+
+</table>
+ -->
+
+<div class="panel-body">  
+    <table  class="table table-hover table-sm"  >  
+        <thead class="thead-light">  
+            <tr>  
+                <th> Id</th>
+                <th> Name</th>
+                <th> Email</th>
+                <!-- <th> Mobile</th> -->
+            </tr>  
+        </thead>  
+        <tbody>  
+            <tr *ngFor="let userR of userLst">
+                <td> {{userR.name}}</td>
+                <td> {{userR.emai}}</td>
+                <td> {{userR.password}}</td>
+                <!-- <td> {{userR.mobile}}</td> -->
+            </tr>
+                </tbody><br>  
+    </table>  
+</div>  

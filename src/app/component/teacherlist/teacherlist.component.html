@@ -1,0 +1,33 @@
+<!-- <input type="button"  value="Find User" (click)="getTeacherlist()" /> -->
+<div class="panel panel-default">  
+    <div class="panel-heading">  
+        <h1 style="text-align: center">Teacher  list</h1><br>  
+        <button class="btn btn-primary" (click)="addTeacher()">Add</button>
+        </div>
+        </div>
+        
+<div class="panel-body">  
+    <table  class="table table-hover table-sm"  >  
+        <thead class="thead-light">  
+            <tr>  
+                <th> Name</th>
+                <th> Specification</th>
+                <th> Contact</th>
+                <th> Address</th>
+                <!-- <th> Mobile</th> -->
+            </tr>  
+        </thead>  
+        <tbody>  
+            <tr *ngFor="let teacherlist of TeacherList">
+                <td> {{teacherlist.teacher_name}}</td>
+                <td> {{teacherlist.teacher_specification}}</td>
+                <td> {{teacherlist.teacher_contacts}}</td>
+                <td> {{teacherlist.teacher_address}}</td>
+                <td><button (click)="deleteteacher(teacherlist.id)" class="btn btn-danger">Delete</button>
+                    <button (click)="updateteacher(teacherlist.id)" class="btn btn-info" style="margin-left: 10px">Update</button>                </td>
+           
+                <!-- <td> {{userR.mobile}}</td> -->
+            </tr>
+                </tbody><br>  
+    </table>  
+</div>  
